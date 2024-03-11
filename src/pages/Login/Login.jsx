@@ -1,7 +1,7 @@
 const Login = () => {
   return <div>
     {/* Login Page */}
-    <div className="w-4/5 container mx-auto flex justify-center">
+    <div className="w-4/5 container mx-auto flex justify-center my-8">
       <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
         <form className="card-body">
           <div className="form-control">
