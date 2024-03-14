@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+import CardCollection from "../components/shared/CardCollection";
 import Main from "../layouts/Main";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
@@ -20,7 +21,11 @@ const routes = [
       {
         path: "/register",
         element: <Register></Register>,
-      }
+      },
+      {
+        path: "/labs",
+        element: <CardCollection></CardCollection>,
+      },
     ],
   },
 ];
