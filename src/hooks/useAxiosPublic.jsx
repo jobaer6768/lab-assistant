@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosPublic = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: "https://lab-assistant-server.vercel.app",
 });
 
 // Add a request interceptor to include the token in the headers
