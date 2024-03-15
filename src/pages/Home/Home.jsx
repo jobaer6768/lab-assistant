@@ -1,12 +1,12 @@
-import CardCollection from "../../components/shared/CardCollection";
 import Footer from "../../components/shared/Footer";
+import Lab from "../Lab/Lab";
 import Banner from "./Banner";
 
 const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <CardCollection></CardCollection>
+      <Lab></Lab>
       <Footer></Footer>
     </div>
   );

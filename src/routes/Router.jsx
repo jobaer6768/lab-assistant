@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
-import CardCollection from "../components/shared/CardCollection";
 import Main from "../layouts/Main";
 import Home from "../pages/Home/Home";
+import Lab from "../pages/Lab/Lab";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 
@@ -24,7 +24,7 @@ const routes = [
       },
       {
         path: "/labs",
-        element: <CardCollection></CardCollection>,
+        element: <Lab></Lab>,
       },
     ],
   },
