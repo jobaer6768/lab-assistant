@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosPublic = axios.create({
-  baseURL: "https://http://localhost:8000",
+  baseURL: "http://localhost:8000",
 });
 
 // Add a request interceptor to include the token in the headers
