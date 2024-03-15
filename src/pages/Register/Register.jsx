@@ -1,42 +1,21 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import useAxiosPublic from "../../hooks/useAxiosPublic";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "../../providers/Authcontext";
 
 const Register = () => {
-  // Define state variables to store form data
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [studentID, setStudentID] = useState("");
+  const { register } = useAuth();
 
-  // Get history object for navigation
+  const navigate = useNavigate();
 
-  // Get axios instance
-  const axiosPublic = useAxiosPublic();
-
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    // Prepare data object with user registration information
-    const userData = {
-      name,
-      email,
-      password,
-      studentID,
-    };
-
-    try {
-      // Make POST request to backend register route
-      const response = await axiosPublic.post("/auth/register", userData);
-
-      // Handle successful registration
-      console.log(response.data);
-      // Redirect user to login page or any other route upon successful registration
-    } catch (error) {
-      // Handle registration error
-      console.error("Error registering user:", error);
-    }
+    const userData = { name, email, password, studentID };
+    register(userData);
+    navigate("/login");
   };
 
   return (

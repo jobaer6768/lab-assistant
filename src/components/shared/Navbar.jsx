@@ -1,7 +1,10 @@
 import { Link } from "react-router-dom";
+import { useAuth } from "../../providers/Authcontext"; // Import your authentication context
 
 // Navbar component for navigation
 const Navbar = () => {
+  const { isAuthenticated, logout } = useAuth(); // Get isAuthenticated function from the authentication context
+
   return (
     <div>
       {/* Navbar container */}
@@ -74,10 +77,19 @@ const Navbar = () => {
           {/* End of navbar */}
           {/* Right side of navbar */}
           <div className="navbar-end">
-            {/* Login link */}
-            <Link to="/login" className="btn text-orange-600 bg-lime-300">
-              Login
-            </Link>
+            {/* Conditionally render login or logout button based on authentication state */}
+            {isAuthenticated() ? (
+              <button
+                onClick={logout}
+                className="btn text-orange-600 bg-lime-300"
+              >
+                Logout
+              </button>
+            ) : (
+              <Link to="/login" className="btn text-orange-600 bg-lime-300">
+                Login
+              </Link>
+            )}
           </div>
         </div>
       </div>
