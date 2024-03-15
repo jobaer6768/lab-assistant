@@ -17,7 +17,7 @@ const Lab = () => {
       .catch((error) => {
         console.error("Error fetching lab data:", error);
       });
-  }, []); // Dependency array includes axiosPublic
+  }, [axiosPublic]); // Dependency array includes axiosPublic
 
   return (
     <div>
