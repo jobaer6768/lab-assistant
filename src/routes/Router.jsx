@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
+import AddLab from "../pages/AddLab/AddLab";
 import CardDetails from "../pages/CardDetails/CardDetails";
 import Hardware from "../pages/Hardware/Hardware";
 import Home from "../pages/Home/Home";
@@ -29,6 +30,10 @@ const routes = [
       {
         path: "/labs",
         element: <Lab></Lab>,
+      },
+      {
+        path: "/addLab",
+        element: <AddLab></AddLab>,
       },
       {
         path: "/software",
