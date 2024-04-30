@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
+import AddDevice from "../pages/AddDevice/AddDevice";
 import AddLab from "../pages/AddLab/AddLab";
 import CardDetails from "../pages/CardDetails/CardDetails";
 import Hardware from "../pages/Hardware/Hardware";
@@ -9,6 +10,7 @@ import Login from "../pages/Login/Login";
 import Networking from "../pages/Networking/Networking";
 import Register from "../pages/Register/Register";
 import Software from "../pages/Software/Software";
+import Verify from "../pages/Verify/Verify";
 
 const routes = [
   {
@@ -36,6 +38,10 @@ const routes = [
         element: <AddLab></AddLab>,
       },
       {
+        path: "/addDevice",
+        element: <AddDevice></AddDevice>,
+      },
+      {
         path: "/software",
         element: <Software></Software>,
       },
@@ -50,6 +56,10 @@ const routes = [
       {
         path: "/networking",
         element: <Networking></Networking>,
+      },
+      {
+        path: "/verify/:Id",
+        element: <Verify></Verify>,
       },
     ],
   },

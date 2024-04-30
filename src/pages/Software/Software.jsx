@@ -20,7 +20,9 @@ const Software = () => {
 
   return (
     <div className="container mx-auto">
-      <h1 className="text-3xl font-bold my-6">Devices Present</h1>
+      <h1 className="text-3xl text-center my-4 font-bold my-6">
+        Devices Present
+      </h1>
       <div className="grid grid-cols-3 gap-4">
         {/* Display cards for each device */}
         {devices.map((device) => (
