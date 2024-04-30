@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const Verify = () => {
@@ -8,6 +8,10 @@ const Verify = () => {
   const [checkboxes, setCheckboxes] = useState({});
   const [verificationComplete, setVerificationComplete] = useState(false);
   const axiosPublic = useAxiosPublic();
+
+  const location = useLocation();
+
+  console.log("Current path:", location.pathname);
 
   useEffect(() => {
     const fetchDeviceDetails = async () => {
