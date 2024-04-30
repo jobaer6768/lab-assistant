@@ -10,6 +10,7 @@ import Login from "../pages/Login/Login";
 import Networking from "../pages/Networking/Networking";
 import Register from "../pages/Register/Register";
 import Software from "../pages/Software/Software";
+import Verify from "../pages/Verify/Verify";
 
 const routes = [
   {
@@ -55,6 +56,10 @@ const routes = [
       {
         path: "/networking",
         element: <Networking></Networking>,
+      },
+      {
+        path: "/verify/:Id",
+        element: <Verify></Verify>,
       },
     ],
   },

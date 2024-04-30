@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 
 const CardDetails = () => {
@@ -101,6 +101,13 @@ const CardDetails = () => {
       {/* left part  */}
       <div className="grow pl-10">
         <img src={image} alt="" />
+        <div className="text-center my-3">
+          <Link to={`/verify/${Id}`}>
+            <button className="btn uppercase text-xl font-bold bg-blue-600 w-3/4 text-white px-3">
+              Verify
+            </button>
+          </Link>
+        </div>
         <div className="flex gap-6">
           <div className="flex-1">
             <p className="capitalize text-lg">deviceName: {deviceName}</p>
